@@ -1,0 +1,198 @@
+/*nutrition.css*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f9f4;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+	line-height: 1.6;
+}
+
+
+.navBox {
+    background-color: #176b45;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+
+}
+
+.navBox .nav-link {
+    color: #ffffff !important;
+}
+
+.nav-container {
+	background-color: #176b45;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+.nav-spacer {
+    width: 45px; 
+}
+
+/* FOOTER */
+footer {
+    background-color: #176b45;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+/* LARGE IMAGE */
+.bigImage {
+    width: 100%;
+    height: 350px;
+    border: 2px solid #555;
+    margin-bottom: 25px;
+    /*overflow: hidden;*/
+}
+
+.bigImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: auto;
+	
+}
+
+
+/* TOP LEFT IMAGE */
+.topLeftImage {
+    width: 25%;
+    height: 200px;
+    border: 2px solid #555;
+    float: left;
+    margin-bottom: 25px;
+}
+
+.topLeftImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: auto;
+}
+
+
+/* OPENING TEXT */
+.openingText {
+    width: 73%;
+    height: 200px;
+    border: 2px solid #555;
+    float: right;
+    margin-bottom: 25px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+/* BIG TEXT BOX */
+.bigText {
+    clear: both;
+    width: 100%;
+    height: 150px;
+    border: 2px solid #555;
+    margin-bottom: 25px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+/* MIDDLE LEFT BOX */
+.middleLeftBox {
+    width: 50%;
+    height: 250px;
+    border: 2px solid #555;
+    float: left;
+    margin-bottom: 25px;
+}
+
+
+/* MIDDLE TOP RIGHT IMAGE */
+.middleTopRightIMG {
+    width: 48%;
+    height: 300px;
+    border: 2px solid #555;
+    float: right;
+    margin-bottom: 25px;
+}
+
+.middleTopRightIMG img {
+    width: 100%;
+    height: 100%;
+    object-fit: auto;
+}
+
+
+/* MIDDLE BOTTOM RIGHT TEXT */
+.middleBottomRightText {
+    margin-left: 50%;
+	width: 48%;
+    height: 150px;
+    border: 2px solid #555;
+    float: right;
+    margin-bottom: 25px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+/* BOTTOM BOX */
+.bottomBox {
+    clear: both;
+    width: 100%;
+    height: auto;
+    border: 2px solid #555;
+    margin-bottom: 25px;
+}
+
+.bottomMiddleIMG{
+	display: flex;
+	width: 100%;
+	height: auto; 
+	justify-content: center;
+	
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+
+    .nav-container {
+        padding: 0 10px;
+    }
+
+    .nav-justify-content-center {
+        gap: 5px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .bigImage {
+        height: 200px;
+    }
+
+    .topLeftImage,
+    .openingText,
+    .middleLeftBox,
+    .middleTopRightIMG,
+    .middleBottomRightText {
+        width: 100%;
+        float: none;
+    }
+
+    .bigText,
+    .bottomBox {
+        width: 100%;
+    }
+
+}
