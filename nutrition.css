@@ -48,13 +48,36 @@ footer {
     margin-top: 30px;
 }
 
+/* DARK MODE */
+.darkMode{
+	background-color: transparent;
+	color: white;
+}
+.darkMode button {
+	border-radius: 80%;
+	background-color: #176b45;
+	 cursor: pointer;
+}
+.darkMode div{
+	background: ;
+	color: white;
+}
+.darkMode h1
+.darkMode h2
+.darkMode h3
+.darkMode p{
+	color: white;
+}
+
+
+
 /* LARGE IMAGE */
 .bigImage {
     width: 100%;
     height: 350px;
     border: 2px solid #555;
     margin-bottom: 25px;
-    /*overflow: hidden;*/
+   
 }
 
 .bigImage img {
@@ -107,8 +130,8 @@ footer {
 
 /* MIDDLE LEFT BOX */
 .middleLeftBox {
-    width: 50%;
-    height: 250px;
+    width: 48%;
+    height: 600px;
     border: 2px solid #555;
     float: left;
     margin-bottom: 25px;
@@ -133,9 +156,8 @@ footer {
 
 /* MIDDLE BOTTOM RIGHT TEXT */
 .middleBottomRightText {
-    margin-left: 50%;
 	width: 48%;
-    height: 150px;
+    height: 270px;
     border: 2px solid #555;
     float: right;
     margin-bottom: 25px;
@@ -148,19 +170,63 @@ footer {
 .bottomBox {
     clear: both;
     width: 100%;
-    height: auto;
+    min-height: 450px;
     border: 2px solid #555;
     margin-bottom: 25px;
+	display: grid;
+	grid-template-columns: 35% 30% 35%;
+	align-items: center;
+	box-sizing: border-box;
 }
-
+.leftspace{
+	width:100%;
+}
 .bottomMiddleIMG{
 	display: flex;
 	width: 100%;
 	height: auto; 
 	justify-content: center;
+	align-items: center;
 	
 }
+.bottomMiddleIMG img{
+	width: 90%;
+	max-width: 300px;
+	height: auto;
+}
+.bmiCalculator input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+	box-sizing: border-box;
+}
 
+.bmiCalculator button {
+    padding: 10px;
+    cursor: pointer;
+	background-color: #176b45;
+}
+.bmiCalculator{
+    width: 90%;
+	max-width: 400px;
+	border: 2px solid #555;
+	padding: 15px;
+	box-sizing:border-box;
+    margin:auto;
+	
+}
+.bmiButtonResult p {
+    border: 2px solid #555;
+    padding: 10px;
+    min-width: 120px;
+    margin: 0;
+
+}
+.bmiButtonResult{
+	padding: 10px;
+	margin: 5px;
+	cursor: pointer;
+}
 /* RESPONSIVE DESIGN */
 @media screen and (max-width: 768px) {
 
