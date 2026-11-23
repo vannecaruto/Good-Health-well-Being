@@ -1,7 +1,7 @@
 /* style.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f9f4;
+    background-color: #fff;
     color: #333;
     padding: 20px;
     margin: 0;
@@ -212,6 +212,13 @@ footer {
     color: #ffffff !important;
 }
 
+.navBox .nav-link:hover,
+.navBox .nav-link:focus {
+  color: #ffff !important; 
+  background-color: rgba(255, 255, 255, 0.12); 
+  border-radius: 6px;
+}
+
 .nav-container {
 	background-color: #176b45;
     display: flex;
@@ -255,6 +262,42 @@ footer {
     line-height: 1.5;
 }
 
+.lifeCarrusel {
+  position: relative;
+  width: 400px;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.lifeImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%!important;
+  height: 100% !important;
+  object-fit: cover!important;
+  display: block;    
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  animation: changePhoto 12s infinite;
+}
+
+/* Delays so they appear in order */
+.lifeImg:nth-child(1) { animation-delay: 0s; }
+.lifeImg:nth-child(2) { animation-delay: 4s; }
+.lifeImg:nth-child(3) { animation-delay: 8s; }
+
+@keyframes changePhoto {
+	0% { opacity: 0; }
+	8% { opacity: 1; }     
+	33% { opacity: 1; }    
+	41% { opacity: 0; }    
+	100% { opacity: 0; }
+}
+
 .lifeImageBox {
     flex: 1;
     display: flex;
@@ -288,23 +331,26 @@ footer {
 .lifeWhyContainer {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 70px;
     flex-wrap: wrap;
 }
 
 .lifeWhyCard {
-    background: #eaf4ec;
-    border: 2px solid #eaeaea;
-    border-radius: 12px;
-    padding: 20px;
+    background: #125435;
+	color: #ffff;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    padding: 24px;
     width: 300px;
     text-align: left;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
-    transition: transform 0.2s ease;
+    box-shadow: 0 12px 28px rgba(18, 84, 53, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .lifeWhyCard:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
+	box-shadow: 0 20px 35px -10px rgba(0, 40, 20, 0.30);
 }
 
 .lifeWhyImg {
@@ -334,7 +380,7 @@ footer {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    background: white;
+    background: #125435;
     border: 2px solid #ddd;
     border-radius: 8px;
     padding: 20px;
@@ -345,7 +391,7 @@ footer {
 .lifeRacesBox, .lifeClubBox {
     flex: 1;
     min-width: 280px;
-    background: #fff;
+    background: #eaf4ec;
     padding: 15px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
@@ -354,6 +400,24 @@ footer {
 .lifeRacesBox h2, .lifeClubBox h2 {
     font-size: 20px;
     margin-bottom: 15px;
+}
+
+.runningBox{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	background-color: #ffffff;
+	border: 1.5px solid #125435;
+	border-radius: 8px;
+	padding: 6px 10px;
+	margin-top: 8px;
+}
+
+.runningBox img{
+	width: 140px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 5px;
 }
 
 /*Form Active life (vannessa Caruto)*/
@@ -404,55 +468,68 @@ footer {
 .lifeWorkoutContainer {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 70px;
     flex-wrap: wrap;
     margin-bottom: 40px;
 }
 
 .videoBox {
-    background: white;
-    border: 2px solid #ddd;
+	background: #ffff;
+	color: #125435;
+    border: 3px solid #125435;
     padding: 15px;
-    width: 280px;
+    width: 280px;         
+    max-width: 100%;      
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+	box-shadow: 0 12px 28px rgba(18, 84, 53, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.videoBox:hover {
+    transform: translateY(-4px);
+	border-color: #198754; 
+	box-shadow: 0 12px 24px rgba(11, 83, 44, 0.30);
 }
 
 .lifeVideoBox {
-    background-color: #212529;
-    color: white;
-    height: 130px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    display: block;
     text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 4px;
     margin: 15px 0;
+    overflow: hidden;
+    border-radius: 6px;
 }
 
-.lifeVideoBox:hover {
-    background-color: #495057;
-    color: #fff;
+
+.lifeVideoBox img {
+    width: 100% !important;
+    height: 140px !important; 
+    object-fit: cover;        
+    display: block;
+    border-radius: 6px;
 }
 
-.line {
-    background-color: #e0e0e0;
-    height: 8px;
-    border-radius: 4px;
-    margin-bottom: 8px;
+.lifeVideoBox:hover img {
+    opacity: 0.85;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(33, 37, 41, 0.85);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    pointer-events: none;
 }
 
 
 /*   Mental health page (Arthur Terry) */
 
 
-body{
-	background-color:#ffffff;
-	color:#333333;
-	padding:20px;
-}
 
 .pagewrapper{
 	max-width:100px;
