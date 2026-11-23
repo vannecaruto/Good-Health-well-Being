@@ -212,6 +212,13 @@ footer {
     color: #ffffff !important;
 }
 
+.navBox .nav-link:hover,
+.navBox .nav-link:focus {
+  color: #ffff !important; 
+  background-color: rgba(255, 255, 255, 0.12); 
+  border-radius: 6px;
+}
+
 .nav-container {
 	background-color: #176b45;
     display: flex;
@@ -336,14 +343,14 @@ footer {
     padding: 24px;
     width: 300px;
     text-align: left;
-    box-shadow: 0 10px 25px -5px rgba(0, 40, 20, 0.08);
+    box-shadow: 0 12px 28px rgba(18, 84, 53, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
 .lifeWhyCard:hover {
     transform: translateY(-6px);
-	box-shadow: 0 20px 35px -10px rgba(0, 40, 20, 0.15);
+	box-shadow: 0 20px 35px -10px rgba(0, 40, 20, 0.30);
 }
 
 .lifeWhyImg {
@@ -373,7 +380,7 @@ footer {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    background: white;
+    background: #125435;
     border: 2px solid #ddd;
     border-radius: 8px;
     padding: 20px;
@@ -384,7 +391,7 @@ footer {
 .lifeRacesBox, .lifeClubBox {
     flex: 1;
     min-width: 280px;
-    background: #fff;
+    background: #eaf4ec;
     padding: 15px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
@@ -449,19 +456,20 @@ footer {
 }
 
 .videoBox {
-	background: #125435;
-	color: #ffff;
-    border: 1px solid rgba(255, 255, 255, 0.6);
+	background: #ffff;
+	color: #125435;
+    border: 3px solid #125435;
     padding: 15px;
     width: 280px;         
     max-width: 100%;      
     border-radius: 8px;
-	box-shadow: 0 10px 25px -5px rgba(0, 40, 20, 0.08);
+	box-shadow: 0 12px 28px rgba(18, 84, 53, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .videoBox:hover {
-    transform: translateY(-6px);
-	box-shadow: 0 20px 35px -10px rgba(0, 40, 20, 0.15);
+    transform: translateY(-4px);
+	border-color: #198754; 
+	box-shadow: 0 12px 24px rgba(11, 83, 44, 0.30);
 }
 
 .lifeVideoBox {
