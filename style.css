@@ -402,6 +402,24 @@ footer {
     margin-bottom: 15px;
 }
 
+.runningBox{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	background-color: #ffffff;
+	border: 1.5px solid #125435;
+	border-radius: 8px;
+	padding: 6px 10px;
+	margin-top: 8px;
+}
+
+.runningBox img{
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
 /*Form Active life (vannessa Caruto)*/
 .form-group-custom {
     display: flex;
