@@ -118,11 +118,39 @@
         </div>
     </section>
 
-
-    <!-- 6. Footer -->
+    <!-- 6. Wellness Pledge Form -->
+	<section class="pledge">
+	   <h2>Take the SDG 3 Wellness Pledge</h2>
+	   <form id="pledgeForm">
+	        <input type="text" id="userName" placeholder="Enter your name">
+			<select id="pledgeGoal">
+			   <option value="Mental Health">Focus on Mental Health</option>
+			   <option value="Active Life">Stay Physically Active</option>
+			   <option value="Nutrition">Eat Healthier Meals</option>
+			</select>
+			<button type="submit">Submit Pledge</button>
+		</form>
+		<p id="pledgeMessage"></p>
+	</selection>
+    <!-- 7. Footer -->
     <footer>
         <p>&copy; 2026 Good Health & Well-being</p>
     </footer>
-
+<script>
+   document.getE1ementById("pledgeform").addEventListener("submit", function(event){
+     event.preventDefault();
+	 var name = document.getE1ementById("userName").value.trim();
+	 var goal = document.getE1ementById("pledgeGoal").value;
+	 var msg = document.getE1ementById("pledgeMessage");
+	 
+	 if (name === ""){
+	    msg.textContent = "Please enter your name before submitting.";
+		msg.style.color = "red";
+	} else {
+	    msg.textContent = "Thank you," + name + "! Your Goal: " + goal + ".";
+		msg.style.color = "green";
+	}
+});
+</script>
 </body>
 </html>
