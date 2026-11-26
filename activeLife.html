@@ -21,7 +21,7 @@
 					<img src="images/logo.png" alt="Logo" class="nav-logo">
 				</a>
 				
-				<button type="button" class="burger" onclick="document.getElementById('myMenu').classList.toggle('show')">☰</button>
+				<button type="button" id='burgerBtn' class="burger" >☰</button>
 
 				<!-- Center Nav -->
 				
@@ -122,20 +122,20 @@
 			
 			<div class="lifeClubBox">
 				<h2>Sign up for our Weekly Running Club</h2>
-				<form>
+				<form id="runningClubForm" name='RegForm' onsubmit='return validateForm()'>
 					<div class="form-group-custom">
-						<label for="exampleInputName1">Full Name</label>
-						<input type="text" class="form-control" id="exampleInputName1">
+						<label for="name">Full Name</label>
+						<input type="text" class="form-control" id="name" placeholder='Enter name'>
 					</div>
 					
 					<div class="form-group-custom">
-						<label for="exampleInputEmail1">Email address</label>
-						<input type="email" class="form-control" id="exampleInputEmail1">
+						<label for="email">Email address</label>
+						<input type="text" class="form-control" id="email" placeholder='Enter email'>
 					</div>
 					
 					<div class="form-group-custom">
-						<label for="exampleInputPhone1">Phone number</label>
-						<input type="tel" class="form-control" id="exampleInputPhone1">
+						<label for="phone">Phone number</label>
+						<input type="tel" class="form-control" id="phone" placeholder='Enter phone'>
 					</div>
 		
 					<div class="form-group-checkbox">
@@ -150,7 +150,16 @@
 					</div>
 					
 					<button type="submit" class="btn btn-primary btn-sm">Submit</button>
+					<p id="formMessage" style="margin-top: 10px; font-weight: bold;"></p>
 				</form>
+				<div id="successCard" class="success-card" style="display: none;">
+					<div class="success">✓</div>
+					<h3 id="successTitle">You're in!</h3>
+					<p id="successDetails"></p>
+					<button type="button" class="btn btn-primary btn-sm" onclick="resetClubForm()">
+						Register another runner
+					</button>
+				</div>
 			</div>
 		</div>	
 		
@@ -206,6 +215,7 @@
 				</div>
 			</div>
 		</div>
+		<script src="js/activeLife.js"></script>
 	</body>
 	<footer>
 		<p>&copy; 2026 Good Health & Well-being</p>
