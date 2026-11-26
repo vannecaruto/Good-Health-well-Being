@@ -1,0 +1,216 @@
+/*style.css*/
+
+/* GENERAL PAGE */
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f1f1f1;
+    font-family: Arial, sans-serif;
+}
+
+
+/* NAVIGATION BOX */
+.navBox {
+    width: 100%;
+    height: 80px;
+    border: 2px solid #555;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+
+/* NAVIGATION CONTAINER */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px;
+}
+
+
+/* LOGO */
+.logo-brand {
+    display: block;
+}
+
+.nav-logo {
+    width: 60px;
+    height: 50px;
+    object-fit: contain;
+}
+
+
+/* NAVIGATION LINKS */
+.nav-justify-content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+
+/* NAVIGATION SPACER */
+.nav-spacer {
+    width: 60px;
+}
+
+
+/* LARGE IMAGE */
+.bigImage {
+    width: 100%;
+    height: 300px;
+    border: 2px solid #555;
+    margin-bottom: 25px;
+    overflow: hidden;
+	object-fit: contain;
+}
+
+.bigImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*LOGO */
+.topLeftImage {
+    width: 48%;
+    height: 200px;
+    border: 2px solid #555;
+    float: left;
+    margin-bottom: 25px;
+}
+
+.topLeftImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* OPENING TEXT */
+.openingText {
+    width: 48%;
+    height: 200px;
+    border: 2px solid #555;
+    float: right;
+    margin-bottom: 25px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+/* BIG TEXT BOX */
+.bigText {
+    clear: both;
+    width: 100%;
+    height: 150px;
+    border: 2px solid #555;
+    margin-bottom: 25px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+/* MIDDLE LEFT BOX */
+.middleLeftBox {
+    width: 48%;
+    height: 250px;
+    border: 2px solid #555;
+    float: left;
+    margin-bottom: 25px;
+}
+
+
+/* MIDDLE TOP RIGHT IMAGE */
+.middleTopRightIMG {
+    width: 48%;
+    height: 150px;
+    border: 2px solid #555;
+    float: right;
+    margin-bottom: 25px;
+}
+
+.middleTopRightIMG img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* MIDDLE BOTTOM RIGHT TEXT */
+.middleBottomRightText {
+    width: 48%;
+    height: 150px;
+    border: 2px solid #555;
+    float: right;
+    margin-bottom: 25px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+/* BOTTOM BOX */
+.bottomBox {
+    clear: both;
+    width: 100%;
+    height: 200px;
+    border: 2px solid #555;
+    margin-bottom: 25px;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+
+    .nav-container {
+        padding: 0 10px;
+    }
+
+    .nav-justify-content-center {
+        gap: 5px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .bigImage {
+        height: 200px;
+    }
+
+    .topLeftImage,
+    .openingText,
+    .middleLeftBox,
+    .middleTopRightIMG,
+    .middleBottomRightText {
+        width: 100%;
+        float: none;
+    }
+
+    .bigText,
+    .bottomBox {
+        width: 100%;
+    }
+
+}
