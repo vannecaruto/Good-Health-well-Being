@@ -594,7 +594,7 @@ footer {
 
 /*   Responsive page Vannessa Caruto */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .nav-container {
 		flex-wrap: wrap;
 	}
@@ -638,17 +638,24 @@ footer {
 
     /* Box's races modified */
     .runningBox {
-        flex-direction: column;
+        display: flex;
+		flex-direction: column;
+		min-width: 0;
     }
 
     .runningBox img {
         width: 100%;
         height: 140px;
+		object-fit: cover;
     }
 
-    .infoCarrera {
-        flex-direction: column;
-        align-items: flex-start;
+    .infoRunning {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		min-width: 0;      
+		width: 100%;
+		overflow-wrap: break-word;
         background-color: #eaf4ec;
         border: 2px solid #125435;
         border-radius: 6px;
@@ -661,6 +668,8 @@ footer {
         background: none;
         padding: 0;
         text-align: left;
+		min-width: 0;
+		max-width: 100%;
     }
 }
 
